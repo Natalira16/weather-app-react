@@ -24,8 +24,10 @@
   color: white;
 }
 
-.App-link {
+.App-link,
+.GitHubLink {
   color: #61dafb;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {

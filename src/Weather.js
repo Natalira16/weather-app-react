@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
-import { FallingLines } from 'react-loader-spinner'
+import { FallingLines } from 'react-loader-spinner';
+import './App.css';
 
 export default function Weather(props) {
     function handleResponse(response) {
@@ -19,6 +20,8 @@ export default function Weather(props) {
                 visible={true}
                 ariaLabel='falling-lines-loading'
             />
+            <br />
+            <p>Open-soursed on <a href="https://github.com/Natalira16/weather-app-react" className="GitHubLink">GitHub</a></p>
         </div>
     )
 }
