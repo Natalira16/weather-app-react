@@ -21,7 +21,7 @@ export default function Weather(props) {
                 ariaLabel='falling-lines-loading'
             />
             <br />
-            <p>Open-soursed on <a href="https://github.com/Natalira16/weather-app-react" className="GitHubLink">GitHub</a></p>
+            <p>Open-soursed on <a href="https://github.com/Natalira16/weather-app-react" className="GitHubLink" target="_blank" rel="noreferrer">GitHub</a></p>
         </div>
     )
 }
