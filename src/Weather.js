@@ -1,27 +1,23 @@
 import React from "react";
-import axios from "axios";
-import { FallingLines } from 'react-loader-spinner';
+import Search from "./Search";
 import './App.css';
 
 export default function Weather(props) {
-    function handleResponse(response) {
-        alert(`The weather in ${response.data.name} is ${Math.round(response.data.main.temp)}°C`)
-    }
-
-    let apiKey = "c9470fa529ce6770f386cc31e17d6a25";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
     return (
-        <div>
-            <h2>Hey from Weather</h2>
-            <FallingLines
-                color="#61dafb"
-                width="100"
-                visible={true}
-                ariaLabel='falling-lines-loading'
-            />
-            <br />
-            <p>Open-soursed on <a href="https://github.com/Natalira16/weather-app-react" className="GitHubLink" target="_blank" rel="noreferrer">GitHub</a></p>
+        <div className="content">
+            <div className="container">
+                <div className="header">
+                    <p>
+                        <a href="https://www.google.com/search?q=weather+berlin" className="city" id="quick-search_berlin">Berlin</a>
+                        <a href="https://www.google.com/search?q=weather+paris" className="city" id="quick-search_paris">Paris</a>
+                        <a href="https://www.google.com/search?q=weather+new+york" className="city" id="quick-search_newyork">New York</a>
+                        <a href="https://www.google.com/search?q=weather+sydney" className="city" id="quick-search_sydney">Sydney</a>
+                    </p>
+                </div>
+                <Search />
+
+                <p className="GitHubTitle"><a href="https://github.com/Natalira16/weather-app-react" className="GitHubLink" target="_blank" rel="noreferrer">Open-sourse code on GitHub</a> by Nataliia Medvedenko</p>
+            </div>
         </div>
     )
 }

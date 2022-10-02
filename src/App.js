@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Weather from './Weather';
 import './App.css';
 
@@ -7,9 +6,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>
-          👋🏼 Hello World 👩🏽‍💻
+          👋🏼 Weather App 👩🏽‍💻
         </h1>
-        <img src={logo} className="App-logo" alt="logo" />
         <Weather city="Berlin" />
       </header>
     </div>
